@@ -26,6 +26,7 @@ function addTask() {
 
         // cross icon
         span.innerHTML = "\u00d7"
+        newTask.appendChild(span);
     }
     // Clear the input box after adding the task
     inputBox.value = '';
