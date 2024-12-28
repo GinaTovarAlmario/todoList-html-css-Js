@@ -31,6 +31,8 @@ function addTask() {
     // Clear the input box after adding the task
     inputBox.value = '';
 
+    // save Data
+    saveData();
 }
 listContainer.addEventListener("click", function (event) {
     // Check if the clicked element is a <li>
@@ -46,16 +48,17 @@ listContainer.addEventListener("click", function (event) {
             // Otherwise, add the "checked" class
             event.target.classList.add("checked");
         }
-
+        saveData();
         // Check if the clicked element is a <span>
     } else if (event.target.tagName === "SPAN") {
 
         // Remove the parent element of the <span>
         event.target.parentElement.remove();
+        saveData();
     }
 }, false);
 
 // define function to save Data in local storage for persistant data in browser
 function saveData(){
-    localStorage.setItem("data", listContainer.innerHTML)
+    localStorage.setItem("data", listContainer.innerHTML);
 }
