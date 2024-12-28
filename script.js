@@ -54,3 +54,8 @@ listContainer.addEventListener("click", function (event) {
         event.target.parentElement.remove();
     }
 }, false);
+
+// define function to save Data in local storage for persistant data in browser
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML)
+}
