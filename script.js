@@ -5,8 +5,12 @@ console.log('Js ok!');
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
-// define function 
-
+/**
+ * Adds a new task to the list.
+ * - If the input box is empty, it shows an alert.
+ * - Otherwise, it creates a new list item with the task description.
+ * It also appends a delete cross icon and saves the data.
+ */
 function addTask() {
 
     // If the input box is empty, display an alert to the user
@@ -34,6 +38,16 @@ function addTask() {
     // save Data
     saveData();
 }
+
+/**
+ * Event listener callback for interacting with tasks.
+ * - If a list item (LI) is clicked, it toggles the "checked" class to mark it as completed or uncompleted.
+ * - If the cross icon (SPAN) is clicked, it removes the task.
+ * It also saves the updated data after every change.
+ * 
+ * @param {Event} event - The click event triggered by the user.
+ */
+
 listContainer.addEventListener("click", function (event) {
     // Check if the clicked element is a <li>
     if (event.target.tagName === "LI") {
@@ -58,7 +72,25 @@ listContainer.addEventListener("click", function (event) {
     }
 }, false);
 
-// define function to save Data in local storage for persistant data in browser
+/**
+ * Saves the current list of tasks to local storage.
+ * It stores the HTML content of the list container as the "data" key.
+ */
 function saveData(){
+
     localStorage.setItem("data", listContainer.innerHTML);
 }
+
+/**
+ * Loads and displays tasks from local storage.
+ * It retrieves the HTML content stored under the "data" key in local storage
+ * and sets it as the innerHTML of the list container.
+ */
+function showTask(){
+    
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
+// Call the showTask function to display tasks saved in local storage
+// This ensures that the tasks persist and are displayed when the page is reloaded
+showTask();
