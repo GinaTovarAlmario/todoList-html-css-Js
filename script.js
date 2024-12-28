@@ -22,7 +22,12 @@ function addTask() {
         // Append the new list item to the list container
         listContainer.appendChild(newTask);
 
-        // Clear the input box after adding the task
-        inputBox.value = '';
+        let span = document.createElement("span");
+
+        // cross icon
+        span.innerHTML = "\u00d7"
     }
+    // Clear the input box after adding the task
+    inputBox.value = '';
+
 }
