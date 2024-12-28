@@ -10,7 +10,7 @@ const listContainer = document.getElementById("list-container");
 function addTask() {
 
     // If the input box is empty, display an alert to the user
-    if (inputBox === '') {
+    if (inputBox.value === '') {
         alert('Please write something in your List!');
     } else {
         // If the input box is not empty, create a new list item (li)
