@@ -81,5 +81,8 @@ ul li::before{
     background-image: url(img/unchecked.png);
     background-size: cover;
     background-position: center;
-
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
 }
