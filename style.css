@@ -13,18 +13,20 @@
  .todo-app{
     width: 100%;
     max-width: 540px;
-    display: flex;
-    align-items: center;
     background: #fff;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
  }
- .todo-app h2{
-    color: #002765;
-
+ .mini-wrap{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
  }
- .todo-app img{
+ .mini-wrap h2{
+    color: #002765;
+ }
+ .mini-wrap img{
     height: 30px;
     width: 30px;
     margin-left: 10px;
