@@ -52,3 +52,12 @@ input{
     background: transparent;
     padding: 10px;
 }
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color:#6a45ff ;
+    color:#fff;
+    cursor: pointer;
+    border-radius: 40px;
+}
