@@ -32,3 +32,6 @@ function addTask() {
     inputBox.value = '';
 
 }
+listContainer.addEventListener("click", ()=>{
+    
+})
