@@ -36,7 +36,8 @@
     width: 30px;
     margin-left: 10px;
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,32 +46,36 @@
     padding-left: 20px;
     margin-bottom: 25px;
 }
-input{
+
+input {
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
 }
-button{
+
+button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background-color:#6a45ff ;
-    color:#fff;
+    background-color: #6a45ff;
+    color: #fff;
     cursor: pointer;
     border-radius: 40px;
 }
-ul li{
+
+ul li {
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 12px 50px ;
+    padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
 }
+
 /* adding checkbox img in list */
-ul li::before{
+ul li::before {
     content: '';
     position: absolute;
     top: 12px;
@@ -82,7 +87,12 @@ ul li::before{
     background-size: cover;
     background-position: center;
 }
-ul li.checked{
+
+ul li.checked {
     color: #555;
     text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(img/checked.png);
 }
